@@ -6,6 +6,7 @@ import { NoticiasProvider } from "../context/NoticiasProvider";
 import Ciencia from "./Ciencia";
 import Deportes from "./Deportes";
 import Entretenimiento from "./Entretenimiento";
+import Formulario from "./Formulario";
 import Inicio from "./Inicio";
 import Negocios from "./Negocios";
 import PaginaNoticia from "./PaginaNoticia";
@@ -25,6 +26,7 @@ function App() {
             <Route path="ciencia" element={<Ciencia />} />
             <Route path="deportes" element={<Deportes />} />
             <Route path="tecnologia" element={<Tecnologia />} />
+            <Route path="formulario" element={<Formulario />} />
             <Route path="noticia/:id" element={<PaginaNoticia />} />
           </Route>
         </Routes>

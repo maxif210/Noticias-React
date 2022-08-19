@@ -1,15 +1,41 @@
-import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import useNoticias from "../hooks/useNoticias";
+import  usFlag from "../assets/America.svg";
+import  arFlag from "../assets/Argentina.svg";
+import  logo from "../assets/logo.png";
 
 const Layout = () => {
   const { handleChangeCategoria } = useNoticias();
   const { pathname } = useLocation();
+  const { setPais,  } = useNoticias();
+  const navigate = useNavigate()
+
+  const handleClick = ()=> {
+    navigate('/formulario')
+  }
+
+  const handleBtnUs = () => {
+    setPais('us')
+    
+  }
+
+  const handleBtnAr = ()=>{
+    setPais('ar')
+    
+  }
 
   return (
     <>
       <header>
-        <div className="logo__container">
-          <h1 className="logo__title">BBC NEWS | WORLD</h1>
+        <div className="header__container">
+          <div className="logo__container">
+          <div className="banderas__container">
+          <button onClick={handleBtnUs} className="banderas__btn"><img className="banderas" src={usFlag} alt="" /></button>
+          <button onClick={handleBtnAr} className="banderas__btn"><img className="banderas" src={arFlag} alt="" /></button>
+          </div>
+          <img className="logo" src={logo} alt="" />
+          </div>
+          <button onClick={handleClick} className="button__subs"> <span>Sumate a nuestros Suscriptores</span></button>
         </div>
 
         <nav className="nav__container">
