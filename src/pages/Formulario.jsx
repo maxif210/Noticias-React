@@ -5,6 +5,8 @@ const Formulario = () => {
   const [nombre, setNombre] = useState('')
   const [email, setEmail] = useState('')
   const [mensaje, setMensaje] = useState('')
+
+  
   return (
     <div className='form'>
       <form className='form__container' action="#" method="post">
