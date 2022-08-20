@@ -20,6 +20,8 @@
 
 
 body {
+  background-image: url(./assets/fondo.svg);
+  background-size: cover;
   font-family: "Roboto Slab", serif;
 }
 
